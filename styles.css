@@ -1,0 +1,145 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo animado para la primera página */
+.fondo-animado {
+    background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ff9a9e);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+/* Fondo animado para la segunda página */
+.fondo-animado-2 {
+    background: linear-gradient(-45deg, #a18cd1, #fbc2eb, #a18cd1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+/* Animación del fondo */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Contenedor central */
+.contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+}
+
+/* Estilos para el título en la primera página */
+body.fondo-animado h1 {
+    font-family: 'Great Vibes', cursive;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    font-size: 4em;
+    margin: 0;
+    animation: textFadeIn 3s ease-in-out;
+}
+
+/* Estilos para el título en la segunda página */
+body.fondo-animado-2 h1 {
+    font-family: 'Pacifico', cursive;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    font-size: 3.5em;
+    margin: 0;
+    animation: textFadeIn 3s ease-in-out;
+}
+
+/* Animación para el texto */
+@keyframes textFadeIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Estilos para los botones */
+.botones {
+    margin-top: 30px;
+}
+
+button {
+    font-size: 1.5em;
+    padding: 10px 40px;
+    margin: 0 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: #ff6b81;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #ff4757;
+    transform: scale(1.05);
+}
+
+/* Estilos para el mensaje en la segunda página */
+.mensaje {
+    font-size: 1.5em;
+    color: rgb(12, 12, 12);
+    margin-top: 20px;
+    animation: textFadeIn 4s ease-in-out;
+}
+
+
+
+
+
+/* Estilos para el GIF del gato animado */
+.gato-animado {
+    width: 400px; /* Ajusta el tamaño según prefieras */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* Centra la imagen y agrega margen superior e inferior */
+    animation: aparecer 2s ease-in-out;
+}
+
+/* Animación de aparición */
+@keyframes aparecer {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+
+
+/* Animación de flotación */
+.gato-animado {
+    /* ... estilos anteriores ... */
+    animation: aparecer 2s ease-in-out, flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+
+/* Estilos para el pie de página */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer p {
+    margin: 0;
+}
